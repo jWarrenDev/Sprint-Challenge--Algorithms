@@ -97,6 +97,18 @@ class SortingRobot:
         Sort the robot's list.
         """
         # Fill this out
+        # I am soooo Not sure what is going on.. 
+        
+        # lets see if we can move right.
+        while self.can_move_right():
+            self.move_right()
+
+        # lets see if we can move left:
+        while self.can_move_left():
+            self.can_move_left()
+
+
+
         pass
 
 
