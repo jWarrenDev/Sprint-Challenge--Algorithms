@@ -2,11 +2,11 @@ Add your answers to the Algorithms exercises here.
 
 Exercise: I
 
-a)  The runtime is Constant with respect to n.  I think that it is O(n)
+a)  The runtime is Linear with respect to n.  I think that it is O(n)
 
-b) The runtime for this function has multiple for loops.  This is most likely an iterative approach which means the we have to walk through each array. As walk through each array this the runtime will mostly likely be notated as O(n^2).  
+b) The runtime for this function has multiple for loops.  This is most likely an iterative approach which means the we have to walk through each array. As walk through each array this the runtime will mostly likely be notated as O(n^3).  
 
-c)  This fuction takes a recursive approach with no range defined.  Also this is a step down approach as defined in the return (n-1), which means that it creates a stack and them collapses them. I think that the notation for this is O(2n). I'm not sure. 
+c)  This fuction takes a recursive approach with no range defined.  Also this is a step down approach as defined in the return (n-1), which means that it creates a stack and them collapses them. I think that the notation for this is O(2n) == O(n). I'm not sure. 
 
 Exercise: II
 
@@ -27,4 +27,4 @@ def safeEggs(n):;
 
     return safeEggs(n-1)
 
-I'm not sure.  But this looks like a recursive so I would say O(2n) again.  
+I'm not sure.  But this looks like a recursive so I would say O(2n) again.  The fastest way would be a log (n) approach using a binary search. 

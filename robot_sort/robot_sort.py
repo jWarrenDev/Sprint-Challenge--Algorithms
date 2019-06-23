@@ -98,18 +98,35 @@ class SortingRobot:
         """
         # Fill this out
         # I am soooo Not sure what is going on.. 
+        #Turn on the light.  
+        self.set_light_on()
         
+        while self.light_is_on():
+            self.set_light_off()
+            
+           
+
         # lets see if we can move right.
-        while self.can_move_right():
-            self.move_right()
-
-        # lets see if we can move left:
-        while self.can_move_left():
-            self.can_move_left()
-
-
-
-        pass
+            while self.can_move_right():
+                self.swap_item() # make sure that you calling the swap in the proper place 
+                self.move_right()
+            #     #lets pick up an item and compare
+                if self.compare_item() == 1:
+                    self.swap_item()
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+                    self.set_light_on()
+                else:
+                    self.move_left()
+                    self.swap_item()
+                    self.move_right()
+                # self.swap_item()
+                
+            if self.can_move_right() == False and self.light_is_on(): 
+                while self.can_move_left() == True:
+                    self.move_left()
+                   
 
 
 if __name__ == "__main__":
